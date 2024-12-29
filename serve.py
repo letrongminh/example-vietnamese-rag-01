@@ -10,6 +10,7 @@ from embedding_model.core import EmbeddingModel
 
 import os
 from dotenv import load_dotenv
+from multiprocessing import freeze_support
 
 load_dotenv()  # Load environment variables from .env file
 os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
@@ -117,4 +118,5 @@ def chat():
     })
 
 if __name__ == '__main__':
+    freeze_support()
     app.run(host='0.0.0.0', debug=True)

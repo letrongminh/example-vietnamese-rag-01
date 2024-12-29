@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 class SemanticRouter():
     def __init__(self, routes):
         self.routes = routes
-        self.embedding_model = SentenceTransformer("keepitreal/vietnamese-sbert")
+        self.embedding_model = SentenceTransformer("Cloyne/vietnamese-embedding_finetuned")
         self.routesEmbedding = {}
         self.routesEmbeddingCal = {}
 
